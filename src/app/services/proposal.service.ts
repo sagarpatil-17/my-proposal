@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProposalService {
-  // private API_BASE_URL = 'https://my-apis-3utq.onrender.com';
-  private API_BASE_URL = 'http://localhost:8080';
+  private API_BASE_URL = 'https://my-apis-3utq.onrender.com';
+  // private API_BASE_URL = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
 
