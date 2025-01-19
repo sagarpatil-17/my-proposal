@@ -1,0 +1,49 @@
+<div class="main-container">
+    <div class="content-container">
+        <ng-container [ngSwitch]="switchSection">
+            <ng-container *ngSwitchCase="'default'">
+                <div class="flex justify-center">
+                    <img class="w-40" src="/assets/gifs/love.gif" alt="gif">
+                </div>
+                <div class="my-4 flex flex-col gap-2">
+                    <h1 class="text-center text-2xl">Hey <span class="text-pink-400">XYZ!</span></h1>
+                    <p class="text-center text-lg">You’ve stolen my heart. ❤️</p>
+                    <p class="text-center text-lg">Every moment with you feels like magic, and I never want it to end.
+                    </p>
+                    <h2 class="text-center text-lg">Will you be my girlfriend? 💖</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="btn" (click)="onResponse('yes')">
+                        <span class="loader" *ngIf="isLoading"></span>
+                        <span *ngIf="!isLoading">💍 YES, I WILL!</span>
+                    </button>
+                    <button class="btn" (click)="onResponse('no')">🙈 NO...</button>
+                </div>
+            </ng-container>
+            <ng-container *ngSwitchCase="'yes'">
+                <div class="flex justify-center">
+                    <img class="w-40" src="/assets/gifs/love.gif" alt="gif">
+                </div>
+                <div class="mt-4 flex flex-col gap-2">
+                    <p class="text-center text-lg">You just made me the happiest person alive!</p>
+                    <p class="text-center text-lg font-medium text-pink-500">I love you! ❤️</p>
+                </div>
+            </ng-container>
+            <ng-container *ngSwitchCase="'no'">
+                <div class="flex justify-center">
+                    <img class="w-40" src="/assets/gifs/sad.gif" alt="gif">
+                </div>
+                <div class="mt-4 flex flex-col gap-3">
+                    <p class="text-center text-lg">Alright, my bad, I guess... Can you think about it again? 🤔</p>
+                    <textarea rows="3" [formControl]="reason"
+                        class="py-2 px-5 rounded-md border border-gray-300 text-gray-900 focus:outline-pink-200"
+                        placeholder="May I know the reason? 💬"></textarea>
+                    <button class="btn" (click)="onSendResponse()">
+                        <span class="loader" *ngIf="isLoading"></span>
+                        <span *ngIf="!isLoading">Send Response</span>
+                    </button>
+                </div>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>

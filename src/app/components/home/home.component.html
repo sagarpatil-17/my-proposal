@@ -1,0 +1,14 @@
+<div class="main-container">
+    <div class="home-container">
+        <h1 class="text-center text-2xl">Hey <span class="text-pink-400">XYZ!</span> 💌</h1>
+        <div class="my-4 flex justify-center">
+            <img class="w-40" src="/assets/gifs/hi-there.gif" alt="gif">
+        </div>
+        <div class="flex flex-col gap-4">
+            <p class="text-center text-lg">Enter the secret password to unlock your surprise. 🔐</p>
+            <input class="py-2 px-5 rounded-md border border-gray-300 text-gray-900 focus:outline-pink-200"
+                type="password" placeholder="Your password" [formControl]="password">
+            <button (click)="onUnlock()" class="btn">Unlock 🔓</button>
+        </div>
+    </div>
+</div>
