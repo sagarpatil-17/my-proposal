@@ -19,7 +19,7 @@ export class ContentComponent {
 
   public onResponse(res: string) {
     const hersResponse = {
-      hers_name: 'XYZ',
+      hers_name: 'Sakshi',
       response: 'yes'
     }
 
@@ -37,7 +37,7 @@ export class ContentComponent {
 
   public onSendResponse() {
     const hersResponse = {
-      hers_name: 'XYZ',
+      hers_name: 'Sakshi',
       response: 'no',
       reason: this.reason.value
     }
