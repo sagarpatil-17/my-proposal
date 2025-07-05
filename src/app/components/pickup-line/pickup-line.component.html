@@ -1,0 +1,20 @@
+<div class="main-container">
+    <div class="content-container">
+        <div class="flex justify-center">
+            <img class="w-40" src="/assets/gifs/love.gif" alt="gif">
+        </div>
+        <div class="my-4 flex flex-col gap-2">
+            <h1 class="text-center text-2xl">Hey <span class="text-pink-400">Sakshi! 💝</span></h1>
+            <p class="text-center text-lg" *ngFor="let line of content">{{line}}</p>
+        </div>
+        <div class="grid grid-cols-1 gap-4">
+            <textarea rows="3" [formControl]="response"
+                class="py-2 px-5 rounded-md border border-gray-300 text-gray-900 focus:outline-pink-200"
+                placeholder="What's your take on this? 💬"></textarea>
+            <button class="btn" (click)="onResponse()">
+                <span class="loader" *ngIf="isLoading"></span>
+                <span *ngIf="!isLoading">Awww... and you say? ✨</span>
+            </button>
+        </div>
+    </div>
+</div>

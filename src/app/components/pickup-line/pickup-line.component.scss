@@ -1,0 +1,50 @@
+.content-container {
+    width: 50%;
+    height: auto;
+    padding: 24px;
+    border-radius: 6px;
+    background-color: #FAFAF5;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    .btn {
+        color: white;
+        padding: 8px 20px;
+        border-radius: 6px;
+        font-weight: 500;
+        background-color: #f472b6;
+        transition: ease .3s background-color;
+
+        &:hover {
+            background-color: #ec4899;
+        }
+    }
+}
+
+@media (max-width:'768px') {
+    .content-container {
+        width: 92%;
+        height: auto;
+    }
+}
+
+// loader
+.loader {
+    width: 18px;
+    height: 18px;
+    border: 3px solid #ffffff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

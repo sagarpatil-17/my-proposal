@@ -17,7 +17,8 @@ export class HomeComponent {
 
   public onUnlock() {
     if (this.password.value?.toLowerCase() === 'sakshi2405') {
-      this.router.navigate(['/my-proposal'])
+      this.router.navigate(['/my-connect'])
+      localStorage.setItem('userName', this.password.value)
     } else {
       Swal.fire({
         icon: 'warning',

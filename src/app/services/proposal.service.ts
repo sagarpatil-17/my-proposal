@@ -21,4 +21,19 @@ export class ProposalService {
     const url = `${this.API_BASE_URL}/api/proposal/response`
     return this.http.post(url, data)
   }
+
+  getPickupLines() {
+    const url = `${this.API_BASE_URL}/api/proposal/pickup_line`
+    return this.http.get(url)
+  }
+
+  addPickupLines(data: any) {
+    const url = `${this.API_BASE_URL}/api/proposal/add_pickup_line`
+    return this.http.post(url, data)
+  }
+
+  pickupLine_res(data: any) {
+    const url = `${this.API_BASE_URL}/api/proposal/pickup_line_response`
+    return this.http.post(url, data)
+  }
 }
