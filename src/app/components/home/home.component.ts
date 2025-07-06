@@ -16,7 +16,7 @@ export class HomeComponent {
   constructor(private router: Router) { }
 
   public onUnlock() {
-    if (this.password.value?.toLowerCase() === 'sakshi2405') {
+    if (this.password.value?.toLowerCase() === 'test') {
       this.router.navigate(['/my-connect'])
       localStorage.setItem('userName', this.password.value)
     } else {
